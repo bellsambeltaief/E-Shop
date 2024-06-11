@@ -7,6 +7,10 @@ import 'package:e_shop/widgets/sign_up.dart';
 import 'package:e_shop/widgets/text_field.dart';
 import 'package:flutter/material.dart';
 
+/// Le widget du LogIn du l'utilisateur
+/// email : balsem@gmail.com
+/// mdp: azerty12
+
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
 

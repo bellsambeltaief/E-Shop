@@ -21,10 +21,10 @@ class _ProductsState extends State<Products> {
   @override
   void initState() {
     super.initState();
-
     _scrollToBottom();
   }
 
+  /// Function pour faire le Scroll
   void _scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
@@ -291,6 +291,7 @@ class _ProductsState extends State<Products> {
   }
 }
 
+/// Les badges
 Widget _buildBadge(MProducts product) {
   double price = product.price;
   var discountPercentage = product.discountPercentage;

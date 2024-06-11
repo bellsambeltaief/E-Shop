@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Le message d'un compte
 class NoAccount extends StatelessWidget {
   final String text1;
   final String text2;

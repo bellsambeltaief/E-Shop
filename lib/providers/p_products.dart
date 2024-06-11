@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:e_shop/models/m_products.dart';
 
+/// Classe provider du produit
 class PProducts with ChangeNotifier {
   List<MProducts> _allProducts = [];
   List<MProducts> _filteredProducts = [];
@@ -12,10 +13,11 @@ class PProducts with ChangeNotifier {
   double maxPrice = 1000;
   RangeValues _currentRangeValues = const RangeValues(0, 1000);
 
+  /// Afficher tous les produits
   Future<void> fetchAllProducts() async {
     try {
       final response = await http.get(
-        Uri.https('dummyjson.com', 'products'),
+        Uri.https('https://dummyjson.com/products'),
       );
 
       if (response.statusCode == 200) {

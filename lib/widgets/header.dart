@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+/// La partie en top du widget 
 class Header extends StatelessWidget {
   final String text;
   const Header({
@@ -11,6 +13,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        /// Logo du l'application
         SvgPicture.asset(
          'assets/icons/e-shoping.svg',
           width: 300, 
@@ -18,6 +21,7 @@ class Header extends StatelessWidget {
           color: Colors.deepPurple, 
         ),
         const SizedBox(height: 30),
+        /// Text pour la fonction 
         Text(
           text,
           textAlign: TextAlign.center,

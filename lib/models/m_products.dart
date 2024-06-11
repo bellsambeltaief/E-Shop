@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-
+/// Classe Modèle du produit
 class MProducts {
   final int id;
   final String title;
@@ -28,11 +28,11 @@ class MProducts {
     discountPercentage: json['discountPercentage'] != null ? json['discountPercentage'].toDouble() : 0,
   );
 }
-
+ /// Afficher tous les produits
   static Future<List<MProducts>> fetchAllProducts() async {
     try {
       final response = await http.get(
-        Uri.https('dummyjson.com', 'products'),
+        Uri.https('https://dummyjson.com/products'),
       );
 
       if (response.statusCode == 200) {

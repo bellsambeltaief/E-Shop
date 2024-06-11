@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Les boutons du l'application
 class Button extends StatelessWidget {
   final String label;
   final void Function() onTap;
@@ -24,7 +25,12 @@ class Button extends StatelessWidget {
             borderRadius: BorderRadius.circular(20.0),
           ),
         ),
-        child: Text(label,style: const TextStyle(color: Colors.white,),),
+        child: Text(
+        label,
+        style: const TextStyle(
+        color: Colors.white,
+        ),
+        ),
       ),
     );
   }
